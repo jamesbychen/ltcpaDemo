@@ -22,7 +22,7 @@
                         <asp:TextBox runat="server" ID="txbPassword"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><asp:Button runat="server" ID="btnLogin" Text="確定" /></td>
+                    <td colspan="2"><asp:Button runat="server" ID="btnLogin" Text="確定" OnClick="btnLogin_Click" /></td>
                 </tr>
             </table>
         </div>
