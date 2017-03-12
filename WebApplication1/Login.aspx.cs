@@ -27,6 +27,7 @@ namespace WebApplication1
             string msg = dc.checkPassword(txbUsername.Text.Trim(), txbPassword.Text.Trim());
             if (msg.Equals("success"))
             {
+                Session["logininfo"] = txbUsername.Text.Trim();
                 Page.Response.Redirect("main.aspx");
             }
             else
