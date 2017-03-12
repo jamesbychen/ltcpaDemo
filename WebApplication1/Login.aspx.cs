@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication1.API;
 
 namespace WebApplication1
 {
@@ -22,7 +23,18 @@ namespace WebApplication1
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
+            DefaultController dc = new DefaultController();
+            string msg = dc.checkPassword(txbUsername.Text.Trim(), txbPassword.Text.Trim());
+            if (msg.Equals("success"))
+            {
+                Page.Response.Redirect("main.aspx");
+            }
+            else
+            {
+                txbUsername.Text = "";
+                txbPassword.Text = "";
+                lbMsg.Text = "帳號或密碼錯誤！請重新輸入！";
+            }
         }
     }
 }

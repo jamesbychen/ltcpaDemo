@@ -19,13 +19,16 @@
                 <tr>
                     <th>Password:</th>
                     <td>
-                        <asp:TextBox runat="server" ID="txbPassword"></asp:TextBox></td>
+                        <asp:TextBox runat="server" ID="txbPassword" TextMode="Password"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><asp:Button runat="server" ID="btnLogin" Text="確定" OnClick="btnLogin_Click" /></td>
+                    <td colspan="2">
+                        <asp:Button runat="server" ID="btnLogin" Text="確定" OnClick="btnLogin_Click" /></td>
                 </tr>
             </table>
         </div>
+        <div>
+            <asp:Label runat="server" ID="lbMsg" ForeColor="Red"></asp:Label></div>
     </form>
 </body>
 </html>
