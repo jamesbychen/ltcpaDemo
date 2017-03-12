@@ -14,10 +14,6 @@ namespace WebApplication1
         {
             if (!Page.IsPostBack)
             {
-                if (Session["logininfo"] != null)
-                {
-                    Page.Response.Redirect("main.aspx");
-                }
             }
         }
 
